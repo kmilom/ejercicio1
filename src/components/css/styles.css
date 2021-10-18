@@ -1,0 +1,47 @@
+.boton{
+    background-color: black;
+    color:white;
+    font-family: "Arial";
+    font-size: 70%;
+}
+
+.detalles{
+    background-color: white;
+    color:gray;
+    font-family: "Arial";
+    border: gray;
+    font-size: 80%;
+}
+
+.producto{
+    font-size: 80%;
+    font-family: "Arial";
+    color:gray;
+}
+
+.precio{
+    font-size: 130%;
+    font-family: "Arial";
+}
+
+#head{
+    font-size: 80%;
+    font-family:"Arial";
+}
+
+#store{
+    font-size: 300%;
+    font-family: "Segoe UI";
+}
+
+#pag{
+    font-size: 75%;
+    font-family: "Arial";
+    color:gray;
+}
+
+#tip{
+    font-size: 70%;
+    font-family: "Arial";
+    color: gray;
+}
