@@ -13,6 +13,12 @@
     font-size: 80%;
 }
 
+.text-decoration-none{
+    font-size: 70%;
+    font-family:"Arial";
+    color:black;
+}
+
 .producto{
     font-size: 80%;
     font-family: "Arial";
@@ -22,11 +28,6 @@
 .precio{
     font-size: 130%;
     font-family: "Arial";
-}
-
-#head{
-    font-size: 80%;
-    font-family:"Arial";
 }
 
 #store{

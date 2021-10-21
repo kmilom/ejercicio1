@@ -16,7 +16,7 @@ class Products extends React.Component{
                         <Row>
                             <Col xs={2} id="tip">10 products</Col>
                             <Col xs={10} sm={{span:4, offset:6}} className="py-2">
-                                <Form.Control placeholder="buscar" />
+                                <Form.Control placeholder="buscar producto"/>
                             </Col>
                         </Row>
                     </Form>
