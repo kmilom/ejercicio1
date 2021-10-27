@@ -2,6 +2,7 @@ import react from 'react';
 import ProductItem from './ProductItems';
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
+import ProductForms from "./ProductForms";
 
 class GridProducts extends react.Component{
     render(){
@@ -16,11 +17,12 @@ class GridProducts extends react.Component{
             {id:8,nombre:'Sour Puss Raspberry',precio:134.990},
             {id:9,nombre:'Pork - Chop Frenched',precio:199.150}
         ]
-        const alEnviarForm = () =>{
-            productos.push({id:10,nombre:'Porc - Shop Frenched',precio:199.150})
-        }
+        
         return(
-            <Row>{productos.map(p=><Col xs={6} md={4} className="border border-secondary py-2 mb-1"><ProductItem producto={p}/></Col>)}</Row>
+            <>
+                <Row><Col xs="3" className="mb-3"><ProductForms /></Col></Row>
+                <Row>{productos.map(p=><Col xs={6} md={4} className="border border-secondary py-2 mb-1"><ProductItem producto={p}/></Col>)}</Row>
+            </>
         )
     }
 }
