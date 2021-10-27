@@ -16,6 +16,9 @@ class GridProducts extends react.Component{
             {id:8,nombre:'Sour Puss Raspberry',precio:134.990},
             {id:9,nombre:'Pork - Chop Frenched',precio:199.150}
         ]
+        const alEnviarForm = () =>{
+            productos.push({id:10,nombre:'Porc - Shop Frenched',precio:199.150})
+        }
         return(
             <Row>{productos.map(p=><Col xs={6} md={4} className="border border-secondary py-2 mb-1"><ProductItem producto={p}/></Col>)}</Row>
         )

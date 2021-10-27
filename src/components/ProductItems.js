@@ -1,7 +1,7 @@
 import react from 'react';
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
-import Button from '@restart/ui/esm/Button';
+import Button from 'react-bootstrap/Button'
 import "./css/styles.css";
 
 const ProductItem = (propiedad) => {
@@ -16,10 +16,10 @@ const ProductItem = (propiedad) => {
             </Row>
             <Row>
                 <Col xs={6} sm={{span:4, offset:4}}>
-                    <Button size="sm" className="detalles">detalles</Button>
+                    <Button size="sm" variant="light" id="detalles">DETALLES</Button>
                 </Col>
                 <Col xs={6} sm={4}>
-                    <Button size="sm" className="boton">agregar al carrito</Button>
+                    <Button size="sm" variant="dark" id="aggCart">AGREGAR AL CARRITO</Button>
                 </Col>
             </Row>
         </>
