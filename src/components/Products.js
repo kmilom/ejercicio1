@@ -2,7 +2,6 @@ import React from "react";
 import GridProducts from './GridProducts';
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
-import { Form } from "react-bootstrap";
 import "./css/styles.css";
 
 class Products extends React.Component{

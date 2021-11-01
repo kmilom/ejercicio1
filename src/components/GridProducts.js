@@ -31,7 +31,7 @@ const GridProducts = () =>{
         return(
             <>
                 <Row>
-                    <Col xs={2} id="tip" className="mb-2">10 products</Col>
+                    <Col xs={2} id="tip" className="mb-2">{products.length} products</Col>
                     <Col xs={10} sm={{span:4, offset:6}}><Form><Form.Control type="text" placeholder="buscar producto"/></Form></Col>
                 </Row>
                 <Row><Col xs="3" className="mb-3"><ProductForms agregar={alEnviarForm} /></Col></Row>
