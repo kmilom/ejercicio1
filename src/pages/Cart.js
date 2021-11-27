@@ -1,9 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Row } from "react-bootstrap";
+import { Col } from "react-bootstrap";
+import "../components/css/styles.css";
+import { GlobalContext } from "../context/GlobalContext";
 
 export default function Cart(){
+
+    const {totalItem} = useContext(GlobalContext);
     return(
-    <div>
-        <h1>Pagina de Cart</h1>
-    </div>
+        <>
+            <Row>
+                <Col id="headCart" className="text-center mb-5">Carrito De Compras</Col>
+            </Row>
+            <Row>
+                {totalItem !== 0 ?
+                    <Row>
+                        Pendiente...
+                    </Row>            
+                :
+                    <Row>
+                        <Col id="cart0" className="text-center">¡Ups! El carrito est&aacute; vac&iacute;o...</Col>
+                    </Row>
+                }
+               
+            </Row>
+        </>
     );
 }

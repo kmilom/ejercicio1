@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Form } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 import { Modal } from "react-bootstrap";
 import { useState } from "react";
 import { Col } from "react-bootstrap";
 import { Row } from "react-bootstrap";
+//import { GlobalContext } from "../context/GlobalContext";
 
 export default function ProductForms(props){
   const [show, setShow] = useState(false);
@@ -12,8 +13,8 @@ export default function ProductForms(props){
   const handleShow = () => setShow(true);
 
   const estadoInicialForm = {
-    nombre: '',
-    precio: ''
+    productName: '',
+    price: ''
   };
 
   const [estadoForm, cambiarEstadoForm] = useState(estadoInicialForm);
@@ -31,6 +32,8 @@ export default function ProductForms(props){
     handleClose();
   }
 
+
+
   return(
     <>
       <Button variant="dark" id="aggProd" onClick={handleShow}>AGREGAR PRODUCTO</Button>
@@ -45,13 +48,13 @@ export default function ProductForms(props){
             <Form.Group>
               <Row>
                 <Form.Label column sm={{span:2, offset:2}}>Nombre</Form.Label>
-                <Col sm="6"><Form.Control name="nombre" id="nameProduct" size="sm" type="text" placeholder="Nombre del producto" value={estadoForm.nombre} onChange={gestionarCamposForm} /></Col>
+                <Col sm="6"><Form.Control name="productName" id="productName" size="sm" type="text" placeholder="Nombre del producto" value={estadoForm.productName} onChange={gestionarCamposForm} /></Col>
               </Row>
             </Form.Group>
             <Form.Group>
               <Row>
                 <Form.Label column sm={{span:2, offset:2}} >Precio</Form.Label>
-                <Col sm="6"><Form.Control name="precio" id="precio" size="sm" type="text" placeholder="Precio del producto" value={estadoForm.precio} onChange={gestionarCamposForm} /></Col>
+                <Col sm="6"><Form.Control name="price" id="price" size="sm" type="text" placeholder="Precio del producto" value={estadoForm.price} onChange={gestionarCamposForm} /></Col>
               </Row>
             </Form.Group>
             <Form.Group>
