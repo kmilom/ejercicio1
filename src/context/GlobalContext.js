@@ -5,7 +5,7 @@ const initialState = {
   cart: [],
   totalItem: 0,
   total: 0.0,
-  chechout: false
+  checkout: false
 };
 
 export const GlobalContext = createContext(initialState);

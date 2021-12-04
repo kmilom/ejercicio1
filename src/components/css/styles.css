@@ -15,13 +15,17 @@
     font-family: "Arial";
 }
 
-#aggCart{
-    color:white;
+.btn{
     font-family: "Arial";
     font-size: 60%;
 }
 
-#aggProd{
+#valueCart{
+    font-family: Arial;
+    font-size: 120%;
+}
+
+#addProd{
     font-family: Arial;
     font-size: 60%;
 }

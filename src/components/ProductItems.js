@@ -54,9 +54,9 @@ const ProductItem = (props) => {
                 </Col>
                 <Col xs={6} sm={4}>
                     {addToCart(props.producto) ?
-                        <Button size="sm" variant="dark" onClick={handleClick} type="button" id="add" className="btn btn-secondary">Agregar al carrito</Button>   
+                        <Button size="sm" variant="dark" onClick={handleClick} type="button" id="add" className="btn btn-secondary">AGREGAR AL CARRITO</Button>   
                     :
-                        <Button size="sm" variant="dark" onClick={handleClick} type="button" id="addMore" className="btn btn-secondary">Agregar m&aacute;s</Button>
+                        <Button size="sm" variant="dark" onClick={handleClick} type="button" id="addMore" className="btn btn-secondary">AGREGAR M&Aacute;S</Button>
                     }
                     </Col>
             </Row>

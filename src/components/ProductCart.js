@@ -4,6 +4,7 @@ import { Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
 import { Table } from "react-bootstrap";
 import Button from "@restart/ui/esm/Button";
+import ValueCart from "./ValueCart";
 
 const ProductCart = () => {
     const {cart, increase, decrease, removeProduct} = useContext(GlobalContext)
@@ -11,7 +12,7 @@ const ProductCart = () => {
     const cantAviable = (p) => {
         return p.quantity > 1;
     }
-    
+
     return(
         <Row>
             <Col sm={6} >
@@ -58,6 +59,7 @@ const ProductCart = () => {
                     </tbody> 
                 </Table>
             </Col>
+            <Col><ValueCart /></Col>
         </Row>
     )
 }

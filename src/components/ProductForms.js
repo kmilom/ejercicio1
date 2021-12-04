@@ -35,11 +35,11 @@ export default function ProductForms(props){
 
   return(
     <>
-      <Button variant="dark" id="aggProd" onClick={handleShow}>AGREGAR PRODUCTO</Button>
+      <Button variant="dark" id="addProd" onClick={handleShow}>AGREGAR PRODUCTO</Button>
 
       <Modal show={show} onHide={handleClose} animation={false}>
         <Modal.Header closeButton>
-          <Modal.Title><Row><Col>Agregar Producto</Col></Row></Modal.Title>
+          <Modal.Title><Row><Col>AGREGAR PRODUCTO</Col></Row></Modal.Title>
         </Modal.Header>
 
         <Modal.Body>
@@ -58,8 +58,8 @@ export default function ProductForms(props){
             </Form.Group>
             <Form.Group>
               <Row>
-                <Col column sm={{span:3, offset:3}} className="py-4"><Button type="submit" variant="dark">Guardar</Button></Col>
-                <Col sm={3} className="py-4"><Button onClick={handleClose} variant="secondary">Cancelar</Button></Col>
+                <Col column sm={{span:3, offset:3}} className="py-4"><Button type="submit" variant="dark">GUARDAR</Button></Col>
+                <Col sm={3} className="py-4"><Button onClick={handleClose} variant="secondary">CANCELAR</Button></Col>
               </Row>
             </Form.Group>
           </Form>
