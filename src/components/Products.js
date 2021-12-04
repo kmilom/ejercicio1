@@ -12,7 +12,7 @@ class Products extends React.Component{
                     <Row><Col className="text-center" id="store">Store</Col></Row>
                     <Row><Col className="text-center mb-3" id="pag">P&aacute;gina de compra.</Col></Row>
                 </Row>
-                <Row><GridProducts/></Row>
+                <GridProducts/>
             </>
         )
     }
