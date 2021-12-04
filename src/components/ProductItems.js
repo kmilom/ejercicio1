@@ -21,9 +21,7 @@ const ProductItem = (props) => {
 
     const handleClick = (e) => {
         if (e.target.id === "add") {
-            addProduct(props.producto)
-            console.log(cart[cart.length - 1])
-            
+            addProduct(props.producto)            
         }  
         if(e.target.id === "addMore"){
             increase(props.producto)

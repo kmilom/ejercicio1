@@ -1,4 +1,4 @@
-import react, {useState, useContext} from 'react';
+import react, {useState} from 'react';
 import ProductItem from './ProductItems';
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';

@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 
 const ValueCart = () => {
     const {totalItem, total, handleCheckout, clearCart} = useContext(GlobalContext)
+    
     return(
         <div id="valueCart">
             <Row><Col className="text-center">Total a pagar: {total}</Col></Row>

@@ -9,10 +9,10 @@ function App() {
   return (
     <Container fluid>
       <GlobalContextProvider>
-      <BrowserRouter>
-      <Header />
-      <MisRutas/>
-      </BrowserRouter>
+        <BrowserRouter>
+          <Header />
+          <MisRutas/>
+        </BrowserRouter>
       </GlobalContextProvider>
     </Container>
   );

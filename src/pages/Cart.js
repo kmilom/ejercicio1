@@ -6,8 +6,8 @@ import { GlobalContext } from "../context/GlobalContext";
 import ProductCart from "../components/ProductCart";
 
 export default function Cart(){
-
     const {totalItem, checkout} = useContext(GlobalContext);
+
     return(
         <>
             <Row>
@@ -27,7 +27,6 @@ export default function Cart(){
                         }
                     </Row>
                 }
-               
             </Row>
         </>
     );
