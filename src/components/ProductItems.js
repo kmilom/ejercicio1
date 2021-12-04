@@ -1,28 +1,43 @@
-import react, {useState, useContext, useEffect} from 'react';
+import react, {useState, useContext} from 'react';
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button'
+import Button from 'react-bootstrap/Button';
 import "./css/styles.css";
 import {Modal} from "react-bootstrap";
 import { GlobalContext } from '../context/GlobalContext';
 
-const ProductItem = (product) => {
+const ProductItem = (props) => {
 
-    const {cart, addProduct, totalItem} = useContext(GlobalContext)
+    const {cart, addProduct, increase} = useContext(GlobalContext)
 
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const{productName, price} = product.producto;
+    const{productName, price} = props.producto;
 
-    /*const addToCart = () => {
-        return cart.find(p => p.id === product.id) != null ? false : true
-    }*/
+    const [addMore, setAddMore] = useState(false);
+
+    const addToCart = (p) => {
+        console.log(p)
+        return cart.find(item => item.id === p) 
+       /* console.log(props)
+        return !cart.find(p => p.id === props.id) */
+    }
+
+    /*const addToCart = (product) => {
+        console.log(item)
+        return !!cart.find((item) => item.id === product.id);
+    };*/
 
     const handleClick = (e) => {
         if (e.target.id === "add") {
-            addProduct(productName)
+            addProduct(props.producto)
+            console.log(cart[cart.length - 1])
+            
         }  
+        if(e.target.id === "addMore"){
+            increase(props.producto)
+        }
     }
 
     return(
@@ -48,8 +63,12 @@ const ProductItem = (product) => {
                     </Modal>
                 </Col>
                 <Col xs={6} sm={4}>
-                    <Button size="sm" variant="dark" onClick={handleClick} type="button" id="add" className="btn btn-secondary">Agregar al carrito</Button>   
-                </Col>
+                    {addToCart(props.producto.id) !== null ?
+                        <Button size="sm" variant="dark" onClick={handleClick} type="button" id="add" className="btn btn-secondary">Agregar al carrito</Button>   
+                    :
+                        <Button size="sm" variant="dark" onClick={handleClick} type="button" id="addMore" className="btn btn-secondary">Agregar m&aacute;s</Button>
+                    }
+                    </Col>
             </Row>
         </>
     )

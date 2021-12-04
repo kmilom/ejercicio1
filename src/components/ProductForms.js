@@ -5,7 +5,6 @@ import { Modal } from "react-bootstrap";
 import { useState } from "react";
 import { Col } from "react-bootstrap";
 import { Row } from "react-bootstrap";
-//import { GlobalContext } from "../context/GlobalContext";
 
 export default function ProductForms(props){
   const [show, setShow] = useState(false);

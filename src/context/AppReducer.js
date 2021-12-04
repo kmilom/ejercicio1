@@ -14,7 +14,12 @@ export const sumTotal = (cart) => {
 export const appReducer = (state, action) => {
     switch(action.type) {
         case "ADD_ITEM":
-            if(!state.cart.find((item) => item.id === action.payload.id)) {
+            /*let product = {...action.payload.product, id: state.products.length+1 }
+            console.log(product)
+            return {
+                ...state, products: [ ...state.products, product ]
+            }*/
+            if(!state.cart.find((productName) => productName.id === action.payload.id)) {
                 state.cart.push({
                     ...action.payload,
                     quantity: 1

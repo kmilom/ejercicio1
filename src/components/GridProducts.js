@@ -4,12 +4,9 @@ import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import ProductForms from "./ProductForms";
 import { Form } from 'react-bootstrap';
-import { GlobalContext } from '../context/GlobalContext';
 import { ProductsInfo } from '../utils/ProductsInfo';
 
 const GridProducts = () =>{
-
-    
 
     const [productos, setProducts] = useState(ProductsInfo);
 

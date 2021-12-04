@@ -3,6 +3,7 @@ import { Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
 import "../components/css/styles.css";
 import { GlobalContext } from "../context/GlobalContext";
+import ProductCart from "../components/ProductCart";
 
 export default function Cart(){
 
@@ -15,11 +16,11 @@ export default function Cart(){
             <Row>
                 {totalItem !== 0 ?
                     <Row>
-                        Pendiente...
+                        <ProductCart />
                     </Row>            
                 :
                     <Row>
-                        <Col id="cart0" className="text-center">¡Ups! El carrito est&aacute; vac&iacute;o...</Col>
+                        <Col id="cart-0" className="text-center">¡Ups! El carrito est&aacute; vac&iacute;o...</Col>
                     </Row>
                 }
                
