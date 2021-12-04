@@ -7,7 +7,7 @@ import ProductCart from "../components/ProductCart";
 
 export default function Cart(){
 
-    const {totalItem} = useContext(GlobalContext);
+    const {totalItem, checkout} = useContext(GlobalContext);
     return(
         <>
             <Row>
@@ -20,7 +20,11 @@ export default function Cart(){
                     </Row>            
                 :
                     <Row>
-                        <Col id="cart-0" className="text-center">¡Ups! El carrito est&aacute; vac&iacute;o...</Col>
+                        {checkout ?
+                            <Col id="cart-check" className="text-center">¡Compra realizada!</Col>
+                        :
+                            <Col id="cart-0" className="text-center">¡Ups! El carrito est&aacute; vac&iacute;o...</Col>
+                        }
                     </Row>
                 }
                

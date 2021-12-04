@@ -28,7 +28,7 @@ const GlobalContextProvider = ({ children }) => {
     const clearCart = () => {
         dispatch({ type: "CLEAR" });
     };
-    const checkout = () => {
+    const handleCheckout = () => {
         dispatch({ type: "CHECKOUT" });
     };
 
@@ -38,7 +38,7 @@ const GlobalContextProvider = ({ children }) => {
         addProduct,
         removeProduct,
         clearCart,
-        checkout,
+        handleCheckout,
         ...state
     };
 
