@@ -2,7 +2,7 @@ import http from './http-config';
 
 const getAll = ()=>{
     
-    return http.get("/places/",{headers:authHeader()});
+    return http.get("/places/");
 }
 const get = (id)=>{
     return http.get(`/places/${id}`,id);

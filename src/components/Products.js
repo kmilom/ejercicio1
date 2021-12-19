@@ -1,5 +1,6 @@
 import React from "react";
-import GridProducts from './GridProducts';
+//import GridProducts from './GridProducts';
+import PlaceListTable from "./ProductItems";
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import "./css/styles.css";
@@ -12,7 +13,7 @@ class Products extends React.Component{
                     <Row><Col className="text-center" id="store">Store</Col></Row>
                     <Row><Col className="text-center mb-3" id="pag">P&aacute;gina de compra.</Col></Row>
                 </Row>
-                <GridProducts/>
+                <PlaceListTable/>
             </>
         )
     }
