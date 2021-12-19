@@ -12,8 +12,9 @@ export default function ProductForms(props){
   const handleShow = () => setShow(true);
 
   const estadoInicialForm = {
-    productName: '',
-    price: ''
+    name: '',
+    description: '',
+    image:'https://sp.depositphotos.com/36088743/stock-photo-icu-monitor.html'
   };
 
   const [estadoForm, cambiarEstadoForm] = useState(estadoInicialForm);
@@ -45,13 +46,13 @@ export default function ProductForms(props){
             <Form.Group>
               <Row>
                 <Form.Label column sm={{span:2, offset:2}}>Nombre</Form.Label>
-                <Col sm="6"><Form.Control name="productName" id="productName" size="sm" type="text" placeholder="Nombre del producto" value={estadoForm.productName} onChange={gestionarCamposForm} /></Col>
+                <Col sm="6"><Form.Control name="name" id="productName" size="sm" type="text" placeholder="Nombre del producto" value={estadoForm.name} onChange={gestionarCamposForm} /></Col>
               </Row>
             </Form.Group>
             <Form.Group>
               <Row>
                 <Form.Label column sm={{span:2, offset:2}} >Precio</Form.Label>
-                <Col sm="6"><Form.Control name="price" id="price" size="sm" type="text" placeholder="Precio del producto" value={estadoForm.price} onChange={gestionarCamposForm} /></Col>
+                <Col sm="6"><Form.Control name="description" id="price" size="sm" type="text" placeholder="Precio del producto" value={estadoForm.description} onChange={gestionarCamposForm} /></Col>
               </Row>
             </Form.Group>
             <Form.Group>

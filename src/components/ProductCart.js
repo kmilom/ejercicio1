@@ -28,9 +28,9 @@ const ProductCart = () => {
                     </thead>
                     <tbody>
                         {cart.map((p)=>(
-                        <tr>
-                            <td>{p.productName}</td>
-                            <td>{p.price}</td>
+                        <tr key={p.id}>
+                            <td>{p.name}</td>
+                            <td>{p.description}</td>
                             <td>{p.quantity}</td>
                             <td>
                                 <Button onClick={() => increase(p)} className="btn btn-dark">
