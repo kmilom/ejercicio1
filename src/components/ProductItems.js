@@ -13,19 +13,35 @@ const ProductItem = (props) => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    //const{productName, price} = props.producto;
-    
+
+    //const [prod, setProd] = useState(props.produto);
+
+
+    const {name, description} = props.producto;
+    var  prod = new Object();
+        prod.productName = name;
+        prod.price = description;
 
     const addToCart = (p) => {
+        console.log(prod)
         return !cart.find(item => item.id === p.id) 
     }
 
+    /*function prod(productName, price){
+        this.productName = productName;
+        this.price = price;
+    }*/
+
     const handleClick = (e) => {
-        if (e.target.id === "add") {
-            addProduct(props.producto)            
+        //var convertirAObjectCart = new prod(props.producto.name, parseInt(props.producto.description))
+        
+        //console.log(prod)
+        
+        if (e.target.id === "add") {           
+            addProduct(prod)            
         }  
         if(e.target.id === "addMore"){
-            increase(props.producto)
+            increase(prod)
         }
     }
 
@@ -34,10 +50,10 @@ const ProductItem = (props) => {
     return(
         <>
             <Row>
-                <Col className="producto">{props.producto.name}</Col>
+                <Col className="producto">{prod.productName}</Col>
             </Row>
             <Row>
-                <Col className="precio">$ {props.producto.description}</Col>
+                <Col className="precio">$ {prod.price}</Col>
             </Row>
             <Row>
                 <Col xs={6} sm={{span:4, offset:4}}>
@@ -54,7 +70,7 @@ const ProductItem = (props) => {
                     </Modal>
                 </Col>
                 <Col xs={6} sm={4}>
-                    {addToCart(props.producto) ?
+                    {addToCart(prod) ?
                         <Button size="sm" variant="dark" onClick={handleClick} type="button" id="add" className="btn btn-secondary">AGREGAR AL CARRITO</Button>   
                     :
                         <Button size="sm" variant="dark" onClick={handleClick} type="button" id="addMore" className="btn btn-secondary">AGREGAR M&Aacute;S</Button>
